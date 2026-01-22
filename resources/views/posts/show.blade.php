@@ -8,7 +8,7 @@
     <title>{{ $post->title }}</title>
 </head>
 <body>
-    <div class="">
+    <div class="post">
         <a href="{{ route('posts.index') }}">Назад к постам</a>
 
         <div>

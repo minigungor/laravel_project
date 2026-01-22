@@ -14,18 +14,18 @@
         @foreach($posts as $post)
             <div class="post">
                 <h2>
-                    <a href="{{route('posts.show', $post->slug)}}">{{$post->title}}</a>
+                    <a href="{{ route('posts.show', $post) }}">{{$post->title}}</a>
                 </h2>
                 <p>
-                    {{$post->published_at?->format('d.m.Y') }}
+                    {{ $post->published_at?->format('d.m.Y') }}
                 </p>
-                <p>{{Str::limit($post->excerpt, 150)}}</p>
-                <a href="{{route('posts.show', $post->slug)}}">Читать дальше</a>
+                <p>{{ Str::limit($post->excerpt, 150) }}</p>
+                <a href="{{ route('posts.show', $post) }}">Читать дальше</a>
             </div>
         @endforeach
 
         <div class="pagination">
-            {{$posts->links()}}
+            {{ $posts->links() }}
         </div>
     </div>
 </body>

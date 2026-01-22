@@ -27,7 +27,7 @@ class PostFactory extends Factory
                 'slug' => $slug,
                 'excerpt' => $this->faker->paragraph(mt_rand(2, 4)),
                 'body' => collect(range(1, mt_rand(2, 4)))
-                    ->map(fn () => $this->faker->paragraph(mt_rand(3,6 )))
+                    ->map(fn () => $this->faker->paragraph(mt_rand(3, 6)))
                     ->implode("\n\n"),
                 'is_published' => $this->faker->boolean(70),
                 'published_at' => $this->faker->dateTimeBetween('-30 days', 'now'),
